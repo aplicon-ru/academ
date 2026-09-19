@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+:root {
+  --font-display: var(--font-unbounded), sans-serif;
+  --font-text: var(--font-manrope), system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-ac-bg: var(--ac-bg);
+  --color-ac-accent: var(--ac-accent);
+  --color-ac-ink: var(--ac-ink);
+
+  --font-ac-display: var(--font-display);
+  --font-ac-text: var(--font-text);
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--ac-bg);
+  }
+
+  body {
+    color: var(--ac-ink);
+    font-family: var(--font-text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: var(--ac-accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+}
